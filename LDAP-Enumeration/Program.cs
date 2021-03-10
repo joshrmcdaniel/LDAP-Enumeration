@@ -7,7 +7,7 @@ using System.DirectoryServices;
 namespace LDAP_Enumeration
 {
     /**
-     * Author: [REDACTED]
+     * Author: Josh Mcdaniel
      * 
      * The purpose of LDAP-Enumeration is to run queries against a windows LDAP server
      */
@@ -102,10 +102,10 @@ namespace LDAP_Enumeration
 
                         Console.WriteLine($"Username:\t{MyDirectoryEntry.Username}");
                         
-                        foreach(String key in Properties.PropertyNames)
-                            foreach(Object Collection in Properties[key])
+                        foreach(String Key in Properties.PropertyNames)
+                            foreach(Object Collection in Properties[Key])
                             {
-                                Console.WriteLine($"{key}\t{Properties[key]}");
+                                Console.WriteLine($"{Key}:\t{Properties[Key]}");
                             }
                         Console.WriteLine('\n');
                     }
