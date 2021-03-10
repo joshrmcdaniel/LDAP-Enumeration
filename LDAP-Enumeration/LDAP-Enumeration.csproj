@@ -4,6 +4,24 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>LDAP_Enumeration</RootNamespace>
+    <Authors>Josh Mcdaniel</Authors>
+    <Company>Self</Company>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="Costura.Fody" Version="5.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Fody" Version="6.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.27.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.8" />
+    <PackageReference Include="Microsoft.Owin.Security.ActiveDirectory" Version="4.1.1" />
+    <PackageReference Include="System.DirectoryServices" Version="6.0.0-preview.1.21102.12" />
+  </ItemGroup>
 
 </Project>
