@@ -20,13 +20,13 @@ namespace LDAP_Enumeration
         [Option('h', "host", Required=false, Default=null, HelpText="Host to connect to (default: 'localhost')")]
         public String Host { get; set; }
 
-        [Option('q', "query", Required=false, Default= "objectclass=*", HelpText="Query to run (default: query all")]
+        [Option('q', "query", Required=false, Default="objectclass=*", HelpText="Query to run (default: query all")]
         public String Query { get; set; }
 
         [Option('u', "username", Required=false, Default=null, HelpText="Username to authenticate as (default: \"\")")]
         public String Username { get; set; }
 
-        [Option('P', "password", Required=false, Default=null, HelpText ="Password to authenticate with (defuault:\"\"")]
+        [Option('p', "password", Required=false, Default=null, HelpText="Password to authenticate with (defuault:\"\"")]
         public String Password { get; set; }
 
         [Option('v', "verbose", Required=false, HelpText="Show debug text")]
@@ -49,7 +49,7 @@ namespace LDAP_Enumeration
                 Verbose = o.Verbose;
                 if (Verbose)
                     Console.WriteLine("Parsing arguments");
-                if(o.Port < 1 || o.Port > 65535)
+                if (o.Port < 1 || o.Port > 65535)
                     throw new ArgumentOutOfRangeException("Port must be 1-65535");
               
                 Port = (ushort) o.Port;
@@ -105,7 +105,7 @@ namespace LDAP_Enumeration
                         foreach(String Key in Properties.PropertyNames)
                             foreach(Object Collection in Properties[Key])
                             {
-                                Console.WriteLine($"{Key}:\t{Properties[Key]}");
+                                Console.WriteLine($"{Key}:\t{Collection}");
                             }
                         Console.WriteLine('\n');
                     }
